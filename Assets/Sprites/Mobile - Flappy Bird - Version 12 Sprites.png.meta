@@ -463,7 +463,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pipe_uo
+      name: pipe_up
       rect:
         serializedVersion: 2
         x: 84
@@ -596,7 +596,7 @@ TextureImporter:
       game_over_text: -664216323
       ground: 7294014354058790825
       pipe_down: 3070810552657499006
-      pipe_uo: 3869963733588150954
+      pipe_up: 3869963733588150954
       play_button: 3255952901831296901
       title: 8181548382722186305
   mipmapLimitGroupName: 
