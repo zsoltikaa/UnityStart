@@ -3,6 +3,7 @@ using UnityEngine.InputSystem; // az uj input rendszert tartalmazo namespace, am
 
 public class NewMonoBehaviourScript : MonoBehaviour
 {
+
     [SerializeField] // ez a tagfuggveny lehetove teszi, hogy az adott valtozot az Inspector ablakban is meg lehessen jeleniteni es szerkeszteni
     private float _velocity = 1.5f; // a mozgas sebesseget tarolo valtozo, amelyet az Inspectorban allithatunk
 
@@ -32,4 +33,11 @@ public class NewMonoBehaviourScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, _rigidbody.linearVelocityY * _rotationSpeed); 
         // a forgatas a z tengely menten tortenik, az aktualis sebesseg es a forgasi sebesseg alapjan
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // amikor ez az objektum osszeutkozik valamivel (2D fizika alapjan), akkor meghivja a GameManager-ben a GameOver() fuggvenyt
+        GameManager.instance.GameOver();
+    }
+
 }
